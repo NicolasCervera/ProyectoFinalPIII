@@ -1,0 +1,22 @@
+<table class="table table-hover table-sm">
+  <thead>
+    <tr>
+      <th scope="col">Codigo</th>
+      <th scope="col">Nombre</th>
+
+      <th>Selecciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usu of usuarios">
+      <th>{{usu.id}}</th>
+      <td>{{usu.name}}</td>
+
+      <td>
+        <a [routerLink]="['/clientes/editar', usu.id]" class="btn btn-success btn-block">Seleccionar</a>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
